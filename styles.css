@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #fcb1b1,
+    #ffddc1
+  ); /* Soft pink and peach gradient */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Heading */
+h1 {
+  color: #ff69b4;
+  margin-top: 20px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 1.8em;
+  animation: fadeIn 3s ease-in;
+}
+
+p {
+  color: #eb0c7c;
+}
+
+/* Responsive Gallery Layout */
+.gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Image container with responsive images */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 30vh;
+  display: block;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(20px);
+}
+
+.image-container:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Music Toggle Button */
+#music-toggle {
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#music-toggle:hover {
+  background-color: #ff85c2;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .gallery {
+    gap: 5px;
+  }
+  .image-container {
+    max-width: 150px;
+  }
+  #music-toggle {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
